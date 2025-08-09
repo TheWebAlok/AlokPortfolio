@@ -1,0 +1,328 @@
+.bg-hero {
+  background-color: #ffffff; /* Pure White */
+}
+
+.bg-about {
+  background-color: #f4f6f8; /* Light Gray */
+}
+
+.bg-skills {
+  background-color: #eef3f8; /* Cool Light Blue */
+}
+
+.bg-projects {
+  background-color: #ffffff; /* White */
+}
+
+.bg-achievements {
+  background-color: #f9f5f0; /* Warm Beige */
+}
+
+.bg-testimonials {
+  background-color: #f1f8f5; /* Mint Green */
+}
+
+.bg-faq-contact {
+  background-color: #f8f9fa; /* Soft Light */
+}
+
+form {
+  max-width: 500px;
+  margin: auto;
+}
+
+textarea {
+  resize: none;
+}
+
+
+
+
+/* Custom Navbar */
+.custom-navbar {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  transition: all 0.3s ease-in-out;
+  z-index: 9999;
+}
+
+/* Brand Styling */
+.navbar-brand {
+  font-family: 'Segoe UI', sans-serif;
+  letter-spacing: 1px;
+}
+
+/* Nav Link Styling */
+.nav-link {
+  font-weight: 500;
+  font-size: 1rem;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Hover Effect */
+.nav-link-hover:hover {
+  color: #0d6efd !important;
+  transform: scale(1.05);
+  border-bottom: 2px solid #0d6efd;
+}
+
+/* Button Hover */
+.navbar .btn:hover {
+  background-color: #084298;
+  box-shadow: 0 0.3rem 0.8rem rgba(13, 110, 253, 0.3);
+}
+
+/* about----- */
+.aboutImg{
+      height: 380px;
+      width: 400px
+
+}
+/* General link styling */
+.aboutLink,
+.aboutLink:visited,
+.row a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Icon hover animation */
+.row a img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.row a:hover img {
+  transform: scale(1.15) rotate(5deg);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Text hover color */
+.row a p {
+  transition: color 0.3s ease;
+}
+
+.row a:hover p {
+  color: rgba(246, 23, 194, 0.868); /* Bootstrap blue */
+}
+
+/* Optional: add rounded background effect */
+.row a img {
+  border-radius: 12px;
+  padding: 6px;
+  background: #ffffff;
+}
+
+
+/* about----- */
+
+/* service--------------------------------------------------------- */
+.service-img {
+  height: 250px; /* Adjust height as needed */
+  object-fit: cover;
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.card:hover .service-img {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+/* skills-------------------------------------------- */
+
+.progress-animate {
+  height: 20px;
+  background-color: #007bff; /* Bootstrap blue */
+  color: #fff;
+  line-height: 20px;
+  text-align: center;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: width 1s ease-in-out;
+}
+.owl-carousel .nk-portfolio-testimonial-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+}
+
+.owl-carousel .nk-portfolio-testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.owl-carousel .item {
+  height: 100%;
+}
+.rating-stars i {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.rating-stars i:hover {
+  transform: scale(1.2);
+}
+.feed{
+      height:550px;
+      width: 600px;
+}
+.feed2{
+
+      margin-top: 22%;
+      height:550px;
+}
+.text-pink {
+  color: #E91E63 !important;
+}
+
+.footer-link {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #E91E63;
+}
+
+.hover-link:hover {
+  color: #E91E63 !important;
+  text-decoration: underline;
+}
+
+/* feedback */
+
+.feedback-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 0.75rem;
+}
+
+.feedback-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.hover-shadow:hover {
+  transform: scale(1.02);
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.1);
+}
+.hover-effect {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-effect:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+.project-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 0.5rem;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.project-card .btn {
+  transition: all 0.2s ease-in-out;
+}
+
+.project-card .btn:hover {
+  background-color: #0d6efd;
+  color: white;
+}
+.image-wrapper {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.project-image {
+  width: 450px;
+  height: 500px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-image {
+  transform: scale(1.05);
+}
+/* achievement */
+
+.fade-in {
+  animation: fadeIn 1s ease-in;
+}
+
+.fade-in-up {
+  animation: fadeInUp 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hover-zoom {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+}
+.hover-zoom:hover {
+  transform: scale(1.03);
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+/* certificate */
+.hover-zoom img {
+  transition: transform 0.4s ease;
+}
+.hover-zoom:hover img {
+  transform: scale(1.05);
+}
+
+
+
+/* contact form  */
+
+/* Focus pe glow effect */
+.focus-glow:focus {
+  box-shadow: 0 0 10px rgba(13,110,253,0.5);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+/* Button hover animation */
+.btn-animate {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.btn-animate:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Wrapper styling */
+.contact-form-wrapper {
+  background: #fff;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+/* feedbackbtn */
+.feedbackbtn:hover{
+      color: white! important;
+      background-color: green! important;
+      
+}

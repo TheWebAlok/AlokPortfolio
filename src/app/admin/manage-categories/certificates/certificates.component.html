@@ -1,0 +1,56 @@
+<div class="container mt-4">
+  <h2 class="mb-4 text-center">Upload Certificate</h2>
+
+  <!-- Certificate Upload Form -->
+  <form (ngSubmit)="uploadCertificate()">
+    <div class="mb-3">
+      <label class="form-label">Certificate Name</label>
+      <input type="text" class="form-control" [(ngModel)]="certificatesName" name="certificatesName" placeholder="Enter certificate name">
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Description</label>
+      <textarea class="form-control" [(ngModel)]="description" name="description" rows="3" placeholder="Enter certificate description"></textarea>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Certificate Link</label>
+      <input type="url" class="form-control" [(ngModel)]="certificateLink" name="certificateLink" placeholder="Enter certificate link">
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Upload Image</label>
+      <input type="file" class="form-control" (change)="onFileChange($event)">
+    </div>
+
+    <button type="submit" class="btn btn-primary" [disabled]="isUploading">
+      <span *ngIf="isUploading" class="spinner-border spinner-border-sm me-2"></span>
+      {{ isUploading ? 'Uploading...' : 'Upload Certificate' }}
+    </button>
+  </form>
+
+  <hr class="my-4">
+
+  <h3 class="mb-3">Uploaded Certificates</h3>
+  <div class="row">
+  <div class="col-md-4 animate__animated animate__slideInRight mb-4" *ngFor="let cert of certificatesList">
+    <div class="card shadow-lg border-0 h-100 hover-zoom rounded-3">
+      <a [href]="cert.certificateLink" target="_blank">
+        <img
+          [src]="cert.imageURL"
+          class="card-img-top rounded-top"
+          [alt]="cert.certificatesName"
+          style="height: 200px; object-fit: cover;">
+      </a>
+      <div class="card-body">
+        <h5 class="card-title fw-bold text-primary">{{ cert.certificatesName }}</h5>
+        <p class="card-text text-muted">{{ cert.description }}</p>
+        <a [href]="cert.certificateLink" target="_blank" class="btn btn-outline-primary btn-sm mt-2">
+          View Certificate
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>

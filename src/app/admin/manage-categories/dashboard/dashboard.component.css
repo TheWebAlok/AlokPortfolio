@@ -1,0 +1,21 @@
+.upload-form {
+  max-width: 650px;
+  margin: auto;
+  background-color: #ffffff;
+  transition: box-shadow 0.3s ease;
+}
+
+.upload-form:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.input-glow {
+  border: 1px solid #ced4da;
+  transition: box-shadow 0.3s, border-color 0.3s;
+}
+
+.input-glow:focus {
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  border-color: #86b7fe;
+  outline: none;
+}

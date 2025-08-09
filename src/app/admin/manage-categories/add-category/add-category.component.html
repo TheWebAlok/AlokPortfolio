@@ -1,0 +1,47 @@
+<div class="container py-5">
+  <div class="bg-white p-5 rounded-4 shadow-lg animate__animated animate__fadeIn add-category-form">
+    <h2 class="text-center text-primary fw-bold mb-4 border-bottom pb-2">🎬 Add New Category (Video)</h2>
+
+    <form (ngSubmit)="submit()">
+      <div class="mb-4">
+        <label class="form-label fw-semibold">Category Name</label>
+        <input
+          type="text"
+          [(ngModel)]="categoryObj.categoryName"
+          name="categoryName"
+          class="form-control form-control-lg input-glow"
+          placeholder="Enter category name"
+          required
+        >
+      </div>
+
+      <div class="mb-4">
+        <label class="form-label fw-semibold"> Description</label>
+        <textarea
+          [(ngModel)]="categoryObj.description"
+          name="description"
+          class="form-control form-control-lg input-glow"
+          rows="4"
+          placeholder="Enter a brief description..."
+        ></textarea>
+      </div>
+
+      <div class="mb-4">
+        <label class="form-label fw-semibold">Upload Video</label>
+        <input
+          type="file"
+          (change)="uploadFile($event)"
+          accept="video/*"
+          class="form-control form-control-lg input-glow"
+          required
+        >
+      </div>
+
+      <div class="text-center">
+        <button type="submit" class="btn btn-lg btn-primary px-5 shadow-sm">
+          Submit
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

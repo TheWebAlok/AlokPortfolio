@@ -1,0 +1,64 @@
+<div class="container py-5">
+  <div class="bg-white p-5 rounded-4 shadow-lg upload-form animate__animated animate__fadeIn">
+    <h2 class="mb-4 text-center text-primary fw-bold border-bottom pb-2">🚀 Upload Your Project</h2>
+
+    <form (ngSubmit)="uploadProject()">
+      <div class="mb-4">
+        <label class="form-label fw-semibold">Project Name</label>
+        <input
+          type="text"
+          class="form-control form-control-lg input-glow"
+          [(ngModel)]="projectName"
+          name="projectName"
+          placeholder="Enter project title"
+          required
+        >
+      </div>
+
+      <div class="mb-4">
+        <label class="form-label fw-semibold"> Description</label>
+        <textarea
+          class="form-control form-control-lg input-glow"
+          [(ngModel)]="description"
+          name="description"
+          rows="4"
+          placeholder="Write a short description..."
+          required
+        ></textarea>
+      </div>
+
+      <div class="mb-4">
+        <label class="form-label fw-semibold">Project Link</label>
+        <input
+          type="url"
+          class="form-control form-control-lg input-glow"
+          [(ngModel)]="projectLink"
+          name="projectLink"
+          placeholder="https://example.com"
+          required
+        >
+      </div>
+
+      <div class="mb-4">
+        <label class="form-label fw-semibold">Upload Image</label>
+        <input
+          type="file"
+          class="form-control form-control-lg input-glow"
+          (change)="onFileChange($event)"
+          accept="image/*"
+          required
+        >
+      </div>
+
+      <div class="text-center">
+        <button
+          type="submit"
+          class="btn btn-lg btn-primary px-5 shadow-sm"
+          [disabled]="isUploading"
+        >
+          {{ isUploading ? 'Uploading...' : 'Upload Project' }}
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
