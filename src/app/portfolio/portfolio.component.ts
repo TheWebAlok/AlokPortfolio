@@ -21,7 +21,7 @@ declare var $: any;
   styleUrls: ['./portfolio.component.css']
 })
 export class PortfolioComponent implements AfterViewInit, OnInit {
-  
+
   formData: Feedback = {
     fullName: '',
     email: '',
@@ -33,7 +33,7 @@ export class PortfolioComponent implements AfterViewInit, OnInit {
   feedbacks: Feedback[] = [];
   categories: Category[] = [];
   projects: Dashboard[] = [];
-  certificatesList: Certificates[] = []; 
+  certificatesList: Certificates[] = [];
 
   contactName = '';
   contactEmail = '';

@@ -16,25 +16,23 @@ import { Feedback } from '../../model/feedback/feedback.model';
   providedIn: 'root'
 })
 export class FeedbackService {
-  private feedbackCollection!: CollectionReference<DocumentData>;
+  private feedbackCollection: CollectionReference<DocumentData>;
 
   constructor(private firestore: Firestore) {
     this.feedbackCollection = collection(this.firestore, 'workshopFeedback');
   }
 
-  // 🔸 Add feedback with timestamp
   submitFeedback(data: Feedback) {
     return addDoc(this.feedbackCollection, {
       ...data,
-      createdAt: new Date()  // or use serverTimestamp() if preferred
+      createdAt: new Date()
     });
   }
 
-  // 🔸 Get all feedbacks, latest first
   getAllFeedbacks(): Observable<Feedback[]> {
     const feedbackQuery = query(
       this.feedbackCollection,
-      orderBy('createdAt', 'desc') // latest first
+      orderBy('createdAt', 'desc')
     );
 
     return collectionData(feedbackQuery, {

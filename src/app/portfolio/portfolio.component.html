@@ -194,7 +194,7 @@
             <a href="https://github.com/alokprakash7766" target="_blank"><img src="github-sign.png" class="img-fluid" alt="Github"
                 style="max-height: 50px;">
               <p class="text-muted small mt-1">Github</p></a>
-              
+
             </div>
             <div class="col-4 col-sm-2 mb-3 mx-auto mx-sm-0">
             <a href="https://mail.google.com"target="_blank"> <img src="gmail.png" class="img-fluid" alt="Gmail"
@@ -401,8 +401,8 @@
                 GitHub.</p>
             </div>
             <div class="mb-3">
-              <h5 class="mb-1">Freelance & Internships</h5>
-              <small class="text-muted">2023 - Present</small>
+              <h5 class="mb-1">Internships</h5>
+              <small class="text-muted">Jun 2025 - Present</small>
               <p class="text-muted small mb-0">Built client projects using
                 React, Angular, and integrated with Firebase/Cloudinary.</p>
             </div>
@@ -715,14 +715,14 @@
           <div
             class="contact-form-wrapper border-0 shadow-sm h-100 p-4 bg-white animate__animated animate__slideInRight">
             <h3 class="mb-4">Let’s Talk!</h3>
-            <form (ngSubmit)="submitContactForm()" novalidate>
+            <form (ngSubmit)="submitContactForm()" class="needs-validation" novalidate>
               <div
                 class="mb-3 animate__animated animate__fadeInRight animate__delay-1s">
                 <label for="contactName" class="form-label">Your Name</label>
                 <input type="text" id="contactName"
                   class="form-control focus-glow"
                   [(ngModel)]="contactName" name="contactName"
-                  placeholder="Name ">
+                  placeholder="Name "required>
               </div>
 
               <div
@@ -731,7 +731,7 @@
                 <input type="email" id="contactEmail"
                   class="form-control focus-glow"
                   [(ngModel)]="contactEmail" name="contactEmail"
-                  placeholder="Email ">
+                  placeholder="Email " required>
               </div>
 
               <div
@@ -739,7 +739,7 @@
                 <label for="contactMessage" class="form-label">Message</label>
                 <textarea id="contactMessage" class="form-control focus-glow"
                   [(ngModel)]="contactMessage" name="contactMessage"
-                  rows="4" placeholder="Write something..."></textarea>
+                  rows="4" placeholder="Write something..."required></textarea>
               </div>
 
               <button type="submit" class="btn btn-primary btn-animate"
