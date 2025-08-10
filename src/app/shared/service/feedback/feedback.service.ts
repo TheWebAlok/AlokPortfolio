@@ -1,16 +1,8 @@
-import { Injectable } from '@angular/core';
-import {
-  Firestore,
-  collection,
-  addDoc,
-  collectionData,
-  CollectionReference,
-  DocumentData,
-  query,
-  orderBy
-} from '@angular/fire/firestore';
+import { Injectable, inject, EnvironmentInjector, runInInjectionContext } from '@angular/core';
+import { Firestore, collection, CollectionReference, DocumentData, collectionData, query, orderBy } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 import { Feedback } from '../../model/feedback/feedback.model';
+import { addDoc } from 'firebase/firestore';
 
 @Injectable({
   providedIn: 'root'
@@ -18,7 +10,7 @@ import { Feedback } from '../../model/feedback/feedback.model';
 export class FeedbackService {
   private feedbackCollection: CollectionReference<DocumentData>;
 
-  constructor(private firestore: Firestore) {
+  constructor(private firestore: Firestore, private environmentInjector: EnvironmentInjector) {
     this.feedbackCollection = collection(this.firestore, 'workshopFeedback');
   }
 
@@ -29,14 +21,14 @@ export class FeedbackService {
     });
   }
 
-  getAllFeedbacks(): Observable<Feedback[]> {
-    const feedbackQuery = query(
-      this.feedbackCollection,
-      orderBy('createdAt', 'desc')
-    );
+ getAllFeedbacks(): Observable<Feedback[]> {
+  const feedbackQuery = query(
+    this.feedbackCollection,
+    orderBy('createdAt', 'desc')
+  );
 
-    return collectionData(feedbackQuery, {
-      idField: 'id'
-    }) as Observable<Feedback[]>;
-  }
+  return runInInjectionContext(this.environmentInjector, () => {
+    return collectionData(feedbackQuery, { idField: 'id' }) as Observable<Feedback[]>;
+  });
+}
 }
