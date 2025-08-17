@@ -3,7 +3,7 @@ services:
     name: portfolio-app
     env: node
     buildCommand: npm install && npm run build -- --configuration production
-    staticPublishPath: dist/AlokPortfolio
+    staticPublishPath: dist/MyPortfolio
     routes:
       - type: rewrite
         source: /*
