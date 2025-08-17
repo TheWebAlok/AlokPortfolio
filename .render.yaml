@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: portfolio-app
+    env: node
+    buildCommand: npm run build -- --configuration production
+    staticPublishPath: dist/portfolio
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
