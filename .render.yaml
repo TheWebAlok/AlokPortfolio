@@ -2,7 +2,7 @@ services:
   - type: web
     name: portfolio-app
     env: node
-    buildCommand: npm run build -- --configuration production
+    buildCommand: npm install && npm run build -- --configuration production
     staticPublishPath: dist/AlokPortfolio
     routes:
       - type: rewrite
